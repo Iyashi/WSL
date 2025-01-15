@@ -313,6 +313,22 @@ Test NVIDIA Container Toolkit:
 ```bash
 docker run --rm -it --gpus=all nvcr.io/nvidia/k8s/cuda-sample:nbody nbody -gpu -benchmark
 ```
+The output should look like this:
+```
+[...omitted...]
+
+> Windowed mode
+> Simulation data stored in video memory
+> Single precision floating point simulation
+> 1 Devices used for simulation
+GPU Device 0: "Ampere" with compute capability 8.6
+
+> Compute 8.6 CUDA device: [NVIDIA GeForce RTX 3090]
+83968 bodies, total time for 10 iterations: 67.994 ms
+= 1036.954 billion interactions per second
+= 20739.085 single-precision GFLOP/s at 20 flops per interaction
+```
+
 > _**Note**: I only have an NVIDIA GPU. For AMD, Intel and others, look for a solution yourself._
 
 ## Create an image of the freshly setup `Workspace`
